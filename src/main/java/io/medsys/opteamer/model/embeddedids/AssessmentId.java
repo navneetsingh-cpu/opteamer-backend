@@ -9,12 +9,6 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-/**
- * @author degijanos
- * @version 1.0
- * @since 2024. 06. 12.
- */
-
 @Embeddable
 @NoArgsConstructor
 @AllArgsConstructor

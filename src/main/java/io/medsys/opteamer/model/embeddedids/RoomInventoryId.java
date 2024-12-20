@@ -6,12 +6,6 @@ import lombok.*;
 
 import java.io.Serializable;
 
-/**
- * @author degijanos
- * @version 1.0
- * @since 2024. 06. 12.
- */
-
 @Data
 @Embeddable
 @NoArgsConstructor

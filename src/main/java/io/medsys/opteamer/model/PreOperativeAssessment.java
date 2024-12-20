@@ -6,12 +6,6 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * @author degijanos
- * @version 1.0
- * @since 2024. 06. 13.
- */
-
 @Entity
 @Table(name = "PRE_OPERATIVE_ASSESSMENTS")
 @Getter

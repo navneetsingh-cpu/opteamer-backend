@@ -8,12 +8,6 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-/**
- * @author degijanos
- * @version 1.0
- * @since 2024. 06. 13.
- */
-
 @Entity
 @Table(name = "ASSESSMENTS")
 @NoArgsConstructor

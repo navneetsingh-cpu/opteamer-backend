@@ -7,12 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * @author degijanos
- * @version 1.0
- * @since 2024. 06. 12.
- */
-
 @Entity
 @Table(name = "OPERATION_ROOMS")
 @NoArgsConstructor

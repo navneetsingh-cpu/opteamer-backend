@@ -10,12 +10,6 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author degijanos
- * @version 1.0
- * @since 2024. 06. 13.
- */
-
 @Entity
 @Table(name = "OPERATIONS")
 @NoArgsConstructor
@@ -48,8 +42,6 @@ public class Operation {
     private LocalDateTime startDate;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable( name = "optype_team_member",
-            joinColumns = @JoinColumn(name = "operation_id"),
-            inverseJoinColumns = @JoinColumn(name = "team_member_id"))
+    @JoinTable(name = "optype_team_member", joinColumns = @JoinColumn(name = "operation_id"), inverseJoinColumns = @JoinColumn(name = "team_member_id"))
     private Set<TeamMember> teamMembers = new HashSet<TeamMember>();
 }

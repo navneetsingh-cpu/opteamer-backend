@@ -9,12 +9,6 @@ import lombok.Setter;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author degijanos
- * @version 1.0
- * @since 2024. 06. 13.
- */
-
 @Entity
 @Table(name = "OPERATION_TYPES")
 @NoArgsConstructor
@@ -22,31 +16,25 @@ import java.util.Set;
 @Setter
 public class OperationType {
 
-    @Id
-    private String name;
+        @Id
+        private String name;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "room_type")
-    private OperationRoomType roomType;
+        @Enumerated(EnumType.STRING)
+        @Column(name = "room_type")
+        private OperationRoomType roomType;
 
-    @Column(name = "duration_hours")
-    private Integer durationHours;
+        @Column(name = "duration_hours")
+        private Integer durationHours;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable( name = "optype_assets",
-                joinColumns = @JoinColumn(name = "optype_id"),
-                inverseJoinColumns = @JoinColumn(name = "asset_id"))
-    private Set<Asset> assets = new HashSet<Asset>();
+        @ManyToMany(fetch = FetchType.EAGER)
+        @JoinTable(name = "optype_assets", joinColumns = @JoinColumn(name = "optype_id"), inverseJoinColumns = @JoinColumn(name = "asset_id"))
+        private Set<Asset> assets = new HashSet<Asset>();
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable( name = "optype_opproviders",
-            joinColumns = @JoinColumn(name = "optype_id"),
-            inverseJoinColumns = @JoinColumn(name = "opprovider_id"))
-    private Set<OperationProvider> operationProviders = new HashSet<OperationProvider>();
+        @ManyToMany(fetch = FetchType.EAGER)
+        @JoinTable(name = "optype_opproviders", joinColumns = @JoinColumn(name = "optype_id"), inverseJoinColumns = @JoinColumn(name = "opprovider_id"))
+        private Set<OperationProvider> operationProviders = new HashSet<OperationProvider>();
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable( name = "optype_pre_op_a",
-            joinColumns = @JoinColumn(name = "optype_id"),
-            inverseJoinColumns = @JoinColumn(name = "pre_op_a_id"))
-    private Set<PreOperativeAssessment> preOperativeAssessments = new HashSet<PreOperativeAssessment>();
+        @ManyToMany(fetch = FetchType.EAGER)
+        @JoinTable(name = "optype_pre_op_a", joinColumns = @JoinColumn(name = "optype_id"), inverseJoinColumns = @JoinColumn(name = "pre_op_a_id"))
+        private Set<PreOperativeAssessment> preOperativeAssessments = new HashSet<PreOperativeAssessment>();
 }

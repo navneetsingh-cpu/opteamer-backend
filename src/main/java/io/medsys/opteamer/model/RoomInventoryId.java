@@ -10,14 +10,10 @@ import java.io.Serializable;
 @Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
-public class AssessmentId implements Serializable {
+public class RoomInventoryId implements Serializable {
+    @Column(name = "asset_id")
+    private Long assetId;
 
-    @Column(name = "team_member_id")
-    private Long teamMemberId;
-
-    @Column(name = "patient_id")
-    private Long patientId;
-
-    @Column(name = "pre_op_a_id")
-    private Long preOpAId;
+    @Column(name = "room_id")
+    private Long roomId;
 }

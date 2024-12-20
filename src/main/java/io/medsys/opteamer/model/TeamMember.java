@@ -8,22 +8,25 @@ import lombok.Setter;
 /**
  * @author degijanos
  * @version 1.0
- * @since 2024. 06. 12.
+ * @since 2024. 06. 13.
  */
 
 @Entity
-@Table(name = "PATIENTS")
-@NoArgsConstructor
+@Table(name = "TEAM_MEMBERS")
 @Getter
 @Setter
-public class Patient {
+@NoArgsConstructor
+public class TeamMember {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
-    private String nin;
+    @ManyToOne
+    @JoinColumn(name = "opprovider_id")
+    private OperationProvider operationProvider;
 }

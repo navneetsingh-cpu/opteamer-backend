@@ -1,11 +1,21 @@
 package io.medsys.opteamer.model;
 
-import jakarta.persistence.*;
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * @author degijanos
+ * @version 1.0
+ * @since 2024. 06. 13.
+ */
 
 @Entity
 @Table(name = "PRE_OPERATIVE_ASSESSMENTS")
-@Data
+@Getter
+@Setter
 public class PreOperativeAssessment {
 
     @Id

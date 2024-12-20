@@ -5,5 +5,5 @@ public enum OperationRoomType {
     CARDIAC_SURGERY,
     NEURO_SURGERY,
     PLASTIC_SURGERY,
-    EMERGENCY_SURGERY,
+    EMERGENCY_SURGERY
 }

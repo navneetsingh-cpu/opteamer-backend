@@ -2,7 +2,7 @@ package io.medsys.opteamer.model.enums;
 
 public enum OperationRoomState {
     STERILE,
-    MAINTAINANCE,
-    UNDER_STERILIZATION,
+    MAINTENANCE,
+    UNDER_STERILISATION,
     AWAITING_CLEANING
 }

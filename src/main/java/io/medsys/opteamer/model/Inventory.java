@@ -1,23 +1,30 @@
 package io.medsys.opteamer.model;
 
-import io.medsys.opteamer.model.enums.AssetType;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+/**
+ * @author degijanos
+ * @version 1.0
+ * @since 2024. 06. 12.
+ */
 
 @Entity
 @Table(name = "INVENTORY")
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
 public class Inventory {
 
     @Id
-    @Column(name = "asset_id")
     private Long assetId;
 
     @OneToOne
     @MapsId
-    @JoinColumn(name = "asset_id")
+    @PrimaryKeyJoinColumn(name = "asset_id")
     private Asset asset;
 
     private Integer count;
-
 }
